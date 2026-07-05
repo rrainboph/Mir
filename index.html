@@ -5,24 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Эксклюзивная мебель & Торговое оборудование | Wood & Steel</title>
     
-    <!-- Стили Tailwind и AOS для анимаций -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
-    <!-- Кастомные стили -->
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[#FBF9F6] text-[#33302E] overflow-x-hidden">
 
-    <!-- НАВИГАЦИЯ -->
     <nav class="fixed top-0 left-0 w-full bg-[#FBF9F6]/90 backdrop-blur-md z-50 border-b border-[#EAE3DA] transition-all duration-300" id="navbar">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-lg font-semibold tracking-widest uppercase text-[#5A524A] hover:opacity-80 transition-opacity">Wood & Steel</a>
+            <a href="#" class="text-lg font-semibold tracking-widest uppercase text-[#5A524A]">Wood & Steel</a>
             <div class="space-x-8 text-sm font-medium tracking-wide hidden md:flex items-center">
                 <a href="#about" class="nav-link relative hover:text-[#8C7E70] transition-colors">О процессе</a>
                 <a href="#portfolio" class="nav-link relative hover:text-[#8C7E70] transition-colors">Работы</a>
@@ -31,9 +26,7 @@
         </div>
     </nav>
 
-    <!-- ГЛАВНЫЙ ЭКРАН -->
     <section class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
-        <!-- Декоративный размытый круг в стиле Pinterest на фоне -->
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-[#F5EFE6] rounded-full filter blur-3xl opacity-70 pointer-events-none"></div>
         
         <div class="max-w-4xl text-center space-y-8 relative z-10" data-aos="fade-up" data-aos-duration="1000">
@@ -45,14 +38,13 @@
                 Делаю точные замеры, проектирую и собираю кронштейны, полки для бутиков, а также дизайнерские рабочие столы.
             </p>
             <div class="pt-4">
-                <a href="#order" class="btn-primary inline-block bg-[#5A524A] text-white text-sm font-medium tracking-wider uppercase px-8 py-4 rounded-sm hover:bg-[#433C36] transition-all duration-300 shadow-sm relative overflow-hidden">
+                <a href="#order" class="inline-block bg-[#5A524A] text-white text-sm font-medium tracking-wider uppercase px-8 py-4 rounded-sm hover:bg-[#433C36] transition-all duration-300 shadow-sm">
                     Оставить заявку на замер
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- ПРОЦЕСС РАБОТЫ -->
     <section id="about" class="py-24 bg-[#F5EFE6] relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-3" data-aos="fade-up">
@@ -81,7 +73,6 @@
         </div>
     </section>
 
-    <!-- ПОРТФОЛИО -->
     <section id="portfolio" class="py-24 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-3" data-aos="fade-up">
@@ -91,33 +82,27 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Карточка 1 -->
                 <div class="group overflow-hidden bg-white rounded-sm shadow-sm border border-[#EAE3DA]" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-80 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80" alt="Бутик" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                        <div class="absolute inset-0 bg-black/5 group-hover:opacity-0 transition-opacity duration-500"></div>
                     </div>
                     <div class="p-6 space-y-2 bg-[#FBF9F6]">
                         <span class="text-[10px] uppercase tracking-widest text-[#8C7E70]">Коммерция</span>
                         <h3 class="text-base font-medium">Стеллажи и кронштейны для бутика одежды</h3>
                     </div>
                 </div>
-                <!-- Карточка 2 -->
                 <div class="group overflow-hidden bg-white rounded-sm shadow-sm border border-[#EAE3DA]" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-80 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&w=600&q=80" alt="Стол" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                        <div class="absolute inset-0 bg-black/5 group-hover:opacity-0 transition-opacity duration-500"></div>
                     </div>
                     <div class="p-6 space-y-2 bg-[#FBF9F6]">
                         <span class="text-[10px] uppercase tracking-widest text-[#8C7E70]">Дом</span>
                         <h3 class="text-base font-medium">Минималистичная столешница для ПК</h3>
                     </div>
                 </div>
-                <!-- Карточка 3 -->
                 <div class="group overflow-hidden bg-white rounded-sm shadow-sm border border-[#EAE3DA]" data-aos="fade-up" data-aos-delay="300">
                     <div class="h-80 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=600&q=80" alt="Полки" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                        <div class="absolute inset-0 bg-black/5 group-hover:opacity-0 transition-opacity duration-500"></div>
                     </div>
                     <div class="p-6 space-y-2 bg-[#FBF9F6]">
                         <span class="text-[10px] uppercase tracking-widest text-[#8C7E70]">Интерьер</span>
@@ -128,7 +113,6 @@
         </div>
     </section>
 
-    <!-- ФОРМА ЗАЯВКИ -->
     <section id="order" class="py-24 bg-[#F5EFE6] relative z-10">
         <div class="max-w-xl mx-auto px-6">
             <div class="text-center mb-12 space-y-3" data-aos="fade-up">
@@ -137,9 +121,7 @@
                 <p class="text-sm text-[#706961] font-light">Заполните форму, и я свяжусь с вами в течение часа.</p>
             </div>
 
-            <!-- ID добавлен для перехвата формы в JS -->
             <form id="leadForm" class="bg-white p-8 rounded-sm shadow-sm border border-[#EAE3DA] space-y-6 relative" data-aos="fade-up">
-                <!-- Токен -->
                 <input type="hidden" name="access_key" value="1e81426c-0051-414b-b6b0-e4b540d966cb">
                 <input type="hidden" name="subject" value="Новая заявка на замер мебели!">
 
@@ -167,19 +149,81 @@
                     <span>Отправить заявку</span>
                 </button>
                 
-                <!-- Контейнер для вывода статуса отправки -->
                 <div id="formResult" class="text-center text-sm font-medium hidden mt-4"></div>
             </form>
         </div>
     </section>
 
-    <!-- ПОДВАЛ -->
     <footer class="py-8 border-t border-[#EAE3DA] text-center text-xs tracking-wider text-[#8C7E70]">
         <p>&copy; 2026 Wood & Steel. Все права защищены.</p>
     </footer>
 
-    <!-- Скрипты анимаций и кастомная логика -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+        // Железная инициализация анимаций
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out'
+        });
+
+        // Работа шапки
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Отправка формы без перезагрузки страницы
+        const form = document.getElementById('leadForm');
+        const result = document.getElementById('formResult');
+        const submitBtn = document.getElementById('submitBtn');
+        const submitBtnText = submitBtn.querySelector('span');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtnText.innerText = 'Отправка...';
+            
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            result.classList.remove('hidden', 'text-red-500', 'text-green-600');
+            result.innerText = "Пожалуйста, подождите...";
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let jsonRes = await response.json();
+                if (response.status == 200) {
+                    result.classList.add('text-green-600');
+                    result.innerText = "Заявка отправлена! Свяжусь с вами в ближайшее время.";
+                    form.reset();
+                } else {
+                    result.classList.add('text-red-500');
+                    result.innerText = jsonRes.message;
+                }
+            })
+            .catch(error => {
+                result.classList.add('text-red-500');
+                result.innerText = "Ошибка сети. Попробуйте позже.";
+            })
+            .then(() => {
+                submitBtn.disabled = false;
+                submitBtnText.innerText = 'Отправить заявку';
+                setTimeout(() => { result.classList.add('hidden'); }, 5000);
+            });
+        });
+    </script>
 </body>
 </html>
