@@ -15,10 +15,9 @@
 </head>
 <body class="bg-[#FBF9F6] text-[#33302E] overflow-x-hidden">
 
-    <!-- НАВИГАЦИЯ -->
     <nav class="fixed top-0 left-0 w-full bg-[#FBF9F6]/90 backdrop-blur-md z-50 border-b border-[#EAE3DA] transition-all duration-300" id="navbar">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-lg font-semibold tracking-widest uppercase text-[#5A524A]">Wood & Steel</a>
+            <a href="#" id="secretLogo" class="text-lg font-semibold tracking-widest uppercase text-[#5A524A] select-none cursor-default">Wood & Steel</a>
             <div class="space-x-8 text-sm font-medium tracking-wide hidden md:flex items-center">
                 <a href="#about" class="nav-link relative hover:text-[#8C7E70] transition-colors">О процессе</a>
                 <a href="#portfolio" class="nav-link relative hover:text-[#8C7E70] transition-colors">Работы</a>
@@ -27,7 +26,6 @@
         </div>
     </nav>
 
-    <!-- ГЛАВНЫЙ ЭКРАН -->
     <section class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-[#F5EFE6] rounded-full filter blur-3xl opacity-70 pointer-events-none"></div>
         <div class="max-w-4xl text-center space-y-8 relative z-10" data-aos="fade-up" data-aos-duration="1000">
@@ -46,7 +44,6 @@
         </div>
     </section>
 
-    <!-- ПРОЦЕСС РАБОТЫ -->
     <section id="about" class="py-24 bg-[#F5EFE6] relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-3" data-aos="fade-up">
@@ -75,7 +72,6 @@
         </div>
     </section>
 
-    <!-- ПОРТФОЛИО -->
     <section id="portfolio" class="py-24 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-3" data-aos="fade-up">
@@ -85,12 +81,10 @@
             </div>
 
             <div id="portfolioGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Карточки загружаются автоматически из localStorage / Базы -->
-            </div>
+                </div>
         </div>
     </section>
 
-    <!-- ФОРМА ЗАЯВКИ -->
     <section id="order" class="py-24 bg-[#F5EFE6] relative z-10">
         <div class="max-w-xl mx-auto px-6">
             <div class="text-center mb-12 space-y-3" data-aos="fade-up">
@@ -143,6 +137,25 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({ once: true, duration: 800, easing: 'ease-out' });
+
+        // Секретный переход по двойному клику/тапу по логотипу
+        const logo = document.getElementById('secretLogo');
+        logo.addEventListener('dblclick', (e) => {
+            e.preventDefault();
+            window.location.href = 'admin.html';
+        });
+        
+        // Для мобилок (где dblclick может тупить) добавим быстрые тапы
+        let lastTap = 0;
+        logo.addEventListener('touchend', (e) => {
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTap;
+            if (tapLength < 300 && tapLength > 0) {
+                e.preventDefault();
+                window.location.href = 'admin.html';
+            }
+            lastTap = currentTime;
+        });
 
         // Валидация телефона +996
         const phoneInput = document.getElementById('phoneInput');
