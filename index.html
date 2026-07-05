@@ -15,6 +15,7 @@
 </head>
 <body class="bg-[#FBF9F6] text-[#33302E] overflow-x-hidden">
 
+    <!-- НАВИГАЦИЯ -->
     <nav class="fixed top-0 left-0 w-full bg-[#FBF9F6]/90 backdrop-blur-md z-50 border-b border-[#EAE3DA] transition-all duration-300" id="navbar">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-lg font-semibold tracking-widest uppercase text-[#5A524A]">Wood & Steel</a>
@@ -22,11 +23,11 @@
                 <a href="#about" class="nav-link relative hover:text-[#8C7E70] transition-colors">О процессе</a>
                 <a href="#portfolio" class="nav-link relative hover:text-[#8C7E70] transition-colors">Работы</a>
                 <a href="#order" class="bg-[#5A524A] text-white px-5 py-2.5 rounded-sm hover:bg-[#433C36] transition-all duration-300 transform hover:-translate-y-0.5">Вызвать на замер</a>
-                <button onclick="openAdminPanel()" class="text-xs text-[#8C7E70]/50 hover:text-[#8C7E70] transition-colors ml-4">🔒</button>
             </div>
         </div>
     </nav>
 
+    <!-- ГЛАВНЫЙ ЭКРАН -->
     <section class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-[#F5EFE6] rounded-full filter blur-3xl opacity-70 pointer-events-none"></div>
         <div class="max-w-4xl text-center space-y-8 relative z-10" data-aos="fade-up" data-aos-duration="1000">
@@ -45,20 +46,51 @@
         </div>
     </section>
 
+    <!-- ПРОЦЕСС РАБОТЫ -->
+    <section id="about" class="py-24 bg-[#F5EFE6] relative z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3" data-aos="fade-up">
+                <h2 class="text-2xl md:text-3xl font-light uppercase tracking-wider">Процесс работы</h2>
+                <div class="w-12 h-[1px] bg-[#8C7E70] mx-auto"></div>
+                <p class="text-sm text-[#706961] font-light">Прозрачность на каждом этапе — от идеи до чистой установки.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="space-y-4 p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl font-light text-[#8C7E70] italic">01</div>
+                    <h3 class="text-lg font-medium">Замер и Договор</h3>
+                    <p class="text-sm text-[#706961] font-light leading-relaxed">Приезжаю на объект с инструментами, обсуждаем концепцию, делаем идеальные расчеты под ваше пространство.</p>
+                </div>
+                <div class="space-y-4 p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl font-light text-[#8C7E70] italic">02</div>
+                    <h3 class="text-lg font-medium">Производство</h3>
+                    <p class="text-sm text-[#706961] font-light leading-relaxed">Изготавливаю прочные кронштейны, изящные полки и массивные столешницы из качественных материалов.</p>
+                </div>
+                <div class="space-y-4 p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl font-light text-[#8C7E70] italic">03</div>
+                    <h3 class="text-lg font-medium">Монтаж</h3>
+                    <p class="text-sm text-[#706961] font-light leading-relaxed">Сам привожу и монтирую все конструкции. Вы получаете готовое пространство без строительного мусора.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОРТФОЛИО -->
     <section id="portfolio" class="py-24 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-3" data-aos="fade-up">
                 <h2 class="text-2xl md:text-3xl font-light uppercase tracking-wider">Реализованные проекты</h2>
                 <div class="w-12 h-[1px] bg-[#8C7E70] mx-auto"></div>
                 <p class="text-sm text-[#706961] font-light">Оборудование для новых бутиков и уютные решения для дома.</p>
-                
-                <button id="addProjectBtn" onclick="addNewProject()" class="hidden bg-[#8C7E70] text-white text-xs uppercase tracking-wider px-4 py-2 mt-4 rounded-sm hover:bg-[#5A524A] transition-colors">+ Добавить новую работу</button>
             </div>
 
-            <div id="portfolioGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div id="portfolioGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Карточки загружаются автоматически из localStorage / Базы -->
+            </div>
         </div>
     </section>
 
+    <!-- ФОРМА ЗАЯВКИ -->
     <section id="order" class="py-24 bg-[#F5EFE6] relative z-10">
         <div class="max-w-xl mx-auto px-6">
             <div class="text-center mb-12 space-y-3" data-aos="fade-up">
@@ -89,7 +121,6 @@
                             🗺️ Карта
                         </button>
                     </div>
-                    <p class="text-[11px] text-[#8C7E70] mt-1">Нажмите «Карта», чтобы проверить правильность в 2ГИС</p>
                 </div>
 
                 <div>
@@ -100,7 +131,6 @@
                 <button type="submit" id="submitBtn" class="w-full bg-[#5A524A] text-white text-sm font-medium tracking-wider uppercase py-4 rounded-sm hover:bg-[#433C36] transition-colors shadow-sm flex justify-center items-center">
                     <span>Отправить заявку</span>
                 </button>
-                
                 <div id="formResult" class="text-center text-sm font-medium hidden mt-4"></div>
             </form>
         </div>
@@ -114,144 +144,58 @@
     <script>
         AOS.init({ once: true, duration: 800, easing: 'ease-out' });
 
-        // --- 1. ЖЕСТКАЯ МАСКА ДЛЯ КЫРГЫЗСКОГО НОМЕРА (+996) ---
+        // Валидация телефона +996
         const phoneInput = document.getElementById('phoneInput');
-        
-        phoneInput.addEventListener('input', (e) => {
-            let matrix = "+996 (___) __-__-__",
-                i = 0,
-                def = matrix.replace(/\D/g, ""),
-                val = phoneInput.value.replace(/\D/g, "");
-            
+        phoneInput.addEventListener('input', () => {
+            let matrix = "+996 (___) __-__-__", i = 0, def = matrix.replace(/\D/g, ""), val = phoneInput.value.replace(/\D/g, "");
             if (def.length >= val.length) val = def;
-            
             phoneInput.value = matrix.replace(/./g, function(a) {
                 return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a;
             });
         });
+        phoneInput.addEventListener('focus', () => { if (phoneInput.value === "") phoneInput.value = "+996 "; });
+        phoneInput.addEventListener('blur', () => { if (phoneInput.value === "+996 ") phoneInput.value = ""; });
 
-        phoneInput.addEventListener('focus', () => {
-            if (phoneInput.value === "") phoneInput.value = "+996 ";
-        });
-
-        phoneInput.addEventListener('blur', () => {
-            if (phoneInput.value === "+996 ") phoneInput.value = "";
-        });
-
-        // --- 2. ПРОВЕРКА АДРЕСА В 2ГИС БИШКЕК ---
         function checkAddressInMaps() {
             const address = document.getElementById('addressInput').value;
-            if (!address) {
-                alert('Пожалуйста, введите адрес для проверки');
-                return;
-            }
-            // Формируем ссылку для поиска в 2ГИС
-            const url = `https://2gis.kg/bishkek/search/${encodeURIComponent(address)}`;
-            window.open(url, '_blank');
+            if (!address) return alert('Введите адрес');
+            window.open(`https://2gis.kg/bishkek/search/${encodeURIComponent(address)}`, '_blank');
         }
 
-        // --- 3. УПРАВЛЕНИЕ ПОРТФОЛИО (БЕЗСЕРВЕРНАЯ АДМИНКА) ---
-        // Дефолтные проекты, если в памяти браузера еще ничего нет
+        // Вывод портфолио
         const defaultProjects = [
             { tag: "Коммерция", title: "Стеллажи и кронштейны для бутика", img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80" },
-            { tag: "Дом", title: "Минималистичная столешница для ПК", img: "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&w=600&q=80" },
-            { tag: "Интерьер", title: "Парящие полки в стиле Pinterest", img: "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=600&q=80" }
+            { tag: "Дом", title: "Минималистичная столешница для ПК", img: "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&w=600&q=80" }
         ];
 
-        let currentProjects = JSON.parse(localStorage.getItem('wood_steel_projects')) || defaultProjects;
-        let isAdmin = false;
-
-        function renderPortfolio() {
+        function render() {
             const grid = document.getElementById('portfolioGrid');
-            grid.innerHTML = '';
-            
-            currentProjects.forEach((proj, index) => {
-                grid.innerHTML += `
-                    <div class="group overflow-hidden bg-white rounded-sm shadow-sm border border-[#EAE3DA]">
-                        <div class="h-80 overflow-hidden relative">
-                            <img src="${proj.img}" alt="Проект" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                            ${isAdmin ? `<button onclick="deleteProject(${index})" class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-sm shadow-md z-20">Удалить</button>` : ''}
-                        </div>
-                        <div class="p-6 space-y-2 bg-[#FBF9F6]">
-                            <span class="text-[10px] uppercase tracking-widest text-[#8C7E70]">${proj.tag}</span>
-                            <h3 class="text-base font-medium">${proj.title}</h3>
-                        </div>
+            const data = JSON.parse(localStorage.getItem('wood_steel_projects')) || defaultProjects;
+            grid.innerHTML = data.map(p => `
+                <div class="group overflow-hidden bg-white rounded-sm shadow-sm border border-[#EAE3DA]">
+                    <div class="h-80 overflow-hidden"><img src="${p.img}" class="w-full h-full object-cover"></div>
+                    <div class="p-6 bg-[#FBF9F6]">
+                        <span class="text-[10px] uppercase tracking-widest text-[#8C7E70]">${p.tag}</span>
+                        <h3 class="text-base font-medium">${p.title}</h3>
                     </div>
-                `;
-            });
+                </div>
+            `).join('');
         }
+        render();
 
-        function openAdminPanel() {
-            const pass = prompt("Введите пароль администратора:");
-            if (pass === "2026") { // Пароль мастера
-                isAdmin = true;
-                document.getElementById('addProjectBtn').classList.remove('hidden');
-                alert("Режим редактирования активирован! Теперь вы можете добавлять и удалять работы.");
-                renderPortfolio();
-            } else {
-                alert("Неверный пароль.");
-            }
-        }
-
-        function addNewProject() {
-            const title = prompt("Введите название проекта (например: Полки для магазина):");
-            const tag = prompt("Категория (например: Дом, Бизнес, Бутик):");
-            const img = prompt("Вставьте прямую ссылку на фотографию (из Telegram, Imgur или др. фотохостинга):");
-            
-            if (title && tag && img) {
-                currentProjects.push({ tag, title, img });
-                localStorage.setItem('wood_steel_projects', JSON.stringify(currentProjects));
-                renderPortfolio();
-            }
-        }
-
-        function deleteProject(index) {
-            if (confirm("Вы уверены, что хотите удалить эту работу из портфолио?")) {
-                currentProjects.splice(index, 1);
-                localStorage.setItem('wood_steel_projects', JSON.stringify(currentProjects));
-                renderPortfolio();
-            }
-        }
-
-        // Первичный рендер при загрузке
-        renderPortfolio();
-
-        // --- ОТПРАВКА ФОРМЫ (AJAX) ---
+        // Форма
         const form = document.getElementById('leadForm');
-        const result = document.getElementById('formResult');
-        const submitBtn = document.getElementById('submitBtn');
-
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            submitBtn.disabled = true;
-            result.classList.remove('hidden', 'text-red-500', 'text-green-600');
-            result.innerText = "Отправка заявки...";
-
-            const formData = new FormData(form);
-            const object = Object.fromEntries(formData);
-
+            document.getElementById('formResult').classList.remove('hidden');
+            document.getElementById('formResult').innerText = "Отправка...";
             fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                body: JSON.stringify(object)
-            })
-            .then(async (response) => {
-                if (response.status == 200) {
-                    result.classList.add('text-green-600');
-                    result.innerText = "Заявка принята! Заказчик свяжется с вами.";
-                    form.reset();
-                } else {
-                    result.classList.add('text-red-500');
-                    result.innerText = "Ошибка отправки.";
-                }
-            })
-            .catch(() => {
-                result.classList.add('text-red-500');
-                result.innerText = "Ошибка сети.";
-            })
-            .then(() => {
-                submitBtn.disabled = false;
-                setTimeout(() => { result.classList.add('hidden'); }, 6000);
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(Object.fromEntries(new FormData(form)))
+            }).then(() => {
+                document.getElementById('formResult').innerText = "Успешно отправлено!";
+                form.reset();
             });
         });
     </script>
